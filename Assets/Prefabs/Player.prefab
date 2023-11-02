@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7608097685186796870}
   - component: {fileID: 2735970815862651751}
-  - component: {fileID: 2811902542277333276}
   m_Layer: 0
   m_Name: Gunpoint
   m_TagString: Untagged
@@ -85,19 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2811902542277333276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4351576681438380805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb702332d30eb0246817a53ebfab19ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gunpoint: {fileID: 0}
 --- !u!1 &6230513503285112142
 GameObject:
   m_ObjectHideFlags: 0
