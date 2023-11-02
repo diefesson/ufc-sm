@@ -25,7 +25,7 @@
                 },
                 {
                     "name": "Fire",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "725e81d1-684a-40aa-9b33-e57508d13db6",
                     "expectedControlType": "Button",
                     "processors": "",

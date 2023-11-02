@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7608097685186796870}
   - component: {fileID: 2735970815862651751}
+  - component: {fileID: 2811902542277333276}
   m_Layer: 0
   m_Name: Gunpoint
   m_TagString: Untagged
@@ -84,6 +85,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2811902542277333276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4351576681438380805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb702332d30eb0246817a53ebfab19ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunpoint: {fileID: 0}
 --- !u!1 &6230513503285112142
 GameObject:
   m_ObjectHideFlags: 0
@@ -100,6 +114,8 @@ GameObject:
   - component: {fileID: 5307569553440403658}
   - component: {fileID: 7906743004196810180}
   - component: {fileID: 3289069575647292808}
+  - component: {fileID: 6416243013773902986}
+  - component: {fileID: 6835047418339609856}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -236,7 +252,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &7434013417590489221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,3 +340,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunpoint: {fileID: 4351576681438380805}
   deadzone: 0.2
+--- !u!114 &6416243013773902986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6230513503285112142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 287b1e92233966d4faddf126abf96ea1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primaryWeapon:
+    bullet: {fileID: 5723796704763754677, guid: 53b40058084c40d4c9c9a7ce45086ee8, type: 3}
+    shotCount: 3
+    arc: 45
+    spread: 0
+    rate: 0.8
+    ammo: 4
+  fallbackWeapon:
+    bullet: {fileID: 5723796704763754677, guid: 53b40058084c40d4c9c9a7ce45086ee8, type: 3}
+    shotCount: 1
+    arc: 0
+    spread: 15
+    rate: 3
+    ammo: -1
+--- !u!114 &6835047418339609856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6230513503285112142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb702332d30eb0246817a53ebfab19ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunpoint: {fileID: 4351576681438380805}
