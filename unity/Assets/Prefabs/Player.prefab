@@ -1,5 +1,37 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1226247879189314900
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6356076060536898659}
+  m_Layer: 0
+  m_Name: ShooterPivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6356076060536898659
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226247879189314900}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7608097685186796870}
+  m_Father: {fileID: 4466561674493207727}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4351576681438380805
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,7 +43,7 @@ GameObject:
   - component: {fileID: 7608097685186796870}
   - component: {fileID: 2735970815862651751}
   m_Layer: 0
-  m_Name: Gunpoint
+  m_Name: DirectionIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,12 +57,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4351576681438380805}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.6, z: 0}
   m_LocalScale: {x: 0.2344, y: 0.121161364, z: 0.2344}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4466561674493207727}
+  m_Father: {fileID: 6356076060536898659}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2735970815862651751
 SpriteRenderer:
@@ -100,8 +132,6 @@ GameObject:
   - component: {fileID: 5307569553440403658}
   - component: {fileID: 7906743004196810180}
   - component: {fileID: 3289069575647292808}
-  - component: {fileID: 6416243013773902986}
-  - component: {fileID: 6835047418339609856}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -122,7 +152,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7608097685186796870}
+  - {fileID: 6356076060536898659}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8703780536631289602
@@ -297,8 +327,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c14c49b61c1bb5f4f81ac614a2718ad3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Life: 100
-  MaxLife: 100
+  level: 1
+  maxLevel: 4
   speed: 15
 --- !u!114 &7906743004196810180
 MonoBehaviour:
@@ -324,44 +354,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3079511f19e6b05429836850fe23b147, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunpoint: {fileID: 4351576681438380805}
-  deadzone: 0.2
---- !u!114 &6416243013773902986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6230513503285112142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 287b1e92233966d4faddf126abf96ea1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  primaryWeapon:
-    bullet: {fileID: 5723796704763754677, guid: 53b40058084c40d4c9c9a7ce45086ee8, type: 3}
-    shotCount: 3
-    arc: 45
-    spread: 0
-    rate: 0.8
-    ammo: 4
-  fallbackWeapon:
-    bullet: {fileID: 5723796704763754677, guid: 53b40058084c40d4c9c9a7ce45086ee8, type: 3}
-    shotCount: 1
-    arc: 0
-    spread: 15
-    rate: 3
-    ammo: -1
---- !u!114 &6835047418339609856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6230513503285112142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb702332d30eb0246817a53ebfab19ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gunpoint: {fileID: 4351576681438380805}
+  gunpoint: {fileID: 1226247879189314900}
