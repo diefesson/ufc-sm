@@ -371,6 +371,7 @@ GameObject:
   m_Component:
   - component: {fileID: 832298589}
   - component: {fileID: 832298588}
+  - component: {fileID: 832298590}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -424,7 +425,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 32, y: 32}
+  m_Size: {x: 16, y: 16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -445,6 +446,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &832298590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832298587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28fcca6b69fc2f3429b80f415fe667f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1457118938}
+  xSize: 4
+  ySize: 4
+  xOffset: 0
+  yOffset: 0
 --- !u!1 &1395100223
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,11 +868,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4466561674493207727, guid: 4ac63a5aa7c823f4e9c21ce0b122fb38, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.07
       objectReference: {fileID: 0}
     - target: {fileID: 4466561674493207727, guid: 4ac63a5aa7c823f4e9c21ce0b122fb38, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.38
       objectReference: {fileID: 0}
     - target: {fileID: 4466561674493207727, guid: 4ac63a5aa7c823f4e9c21ce0b122fb38, type: 3}
       propertyPath: m_LocalPosition.z
