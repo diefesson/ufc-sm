@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,7 +5,7 @@ public class GunpointRotator : MonoBehaviour
 {
     public GameObject gunpoint;
 
-    public float deadzone;
+    public float deadzone = 0.1f;
 
     private float distance;
 
@@ -20,7 +17,7 @@ public class GunpointRotator : MonoBehaviour
 
     void Start()
     {
-        distance = gunpoint.transform.position.magnitude;
+        distance = Vector2.Distance(transform.position, gunpoint.transform.position);
         direction = new Vector2(0, 1);
     }
 
