@@ -5,8 +5,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    public int Life;
-    public int MaxLife;
+    public int level = 1;
+    public int maxLevel = 4;
     public float speed;
 
 }

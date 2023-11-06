@@ -30,6 +30,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7608097685186796870}
+  - {fileID: 6205083496555205189}
+  - {fileID: 2526948361353090915}
   m_Father: {fileID: 4466561674493207727}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4351576681438380805
@@ -132,6 +134,7 @@ GameObject:
   - component: {fileID: 5307569553440403658}
   - component: {fileID: 7906743004196810180}
   - component: {fileID: 3289069575647292808}
+  - component: {fileID: 6629662081428504896}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -329,7 +332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 1
   maxLevel: 4
-  speed: 15
+  speed: 12
 --- !u!114 &7906743004196810180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,3 +358,113 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunpoint: {fileID: 1226247879189314900}
+--- !u!114 &6629662081428504896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6230513503285112142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb702332d30eb0246817a53ebfab19ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &7893346907403909221
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6205083496555205189}
+  - component: {fileID: 1130668889328974546}
+  m_Layer: 0
+  m_Name: L1RShooter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6205083496555205189
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7893346907403909221}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.3, y: 0.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6356076060536898659}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1130668889328974546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7893346907403909221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39bfa0e00160d1f4e90e55ee5fa327df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shoots:
+  - delay: 0
+    bullet: {fileID: 5723796704763754677, guid: 53b40058084c40d4c9c9a7ce45086ee8, type: 3}
+  levels: 01000000
+  rest: 0.5
+--- !u!1 &8417369065151517928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2526948361353090915}
+  - component: {fileID: 4044809400574950461}
+  m_Layer: 0
+  m_Name: L1LShooter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2526948361353090915
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8417369065151517928}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.3, y: 0.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6356076060536898659}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4044809400574950461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8417369065151517928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39bfa0e00160d1f4e90e55ee5fa327df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shoots:
+  - delay: 0.25
+    bullet: {fileID: 5723796704763754677, guid: 53b40058084c40d4c9c9a7ce45086ee8, type: 3}
+  levels: 01000000
+  rest: 0.25
