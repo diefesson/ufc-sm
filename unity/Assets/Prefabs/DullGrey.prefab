@@ -109,7 +109,10 @@ GameObject:
   - component: {fileID: 964593486662421557}
   - component: {fileID: 3054379168653457929}
   - component: {fileID: 6227520065925889181}
+  - component: {fileID: 6378995848591617077}
   - component: {fileID: 7016596260714691151}
+  - component: {fileID: 4534719252415247969}
+  - component: {fileID: 1479720378182530638}
   m_Layer: 0
   m_Name: DullGrey
   m_TagString: Untagged
@@ -195,6 +198,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &6378995848591617077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8021787892878118496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ca8c26180a9ad7479ca130ca6ec427b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 3
+  _maxHealth: 3
 --- !u!114 &7016596260714691151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,3 +225,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+--- !u!114 &4534719252415247969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8021787892878118496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71e5906f61a06dd4bbddb916dd17e038, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selfDestruction: 1
+  change: -1
+  affectsPlayer: 1
+  affectsEnemy: 0
+--- !u!114 &1479720378182530638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8021787892878118496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14db7995e73736c4b8e0fc39481c6c98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

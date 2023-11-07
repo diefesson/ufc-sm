@@ -371,7 +371,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3185988872225001172, guid: d8bcc74d9f62c3d47abb469987d62dea, type: 3}
       propertyPath: m_Name
-      value: LevelPowerup
+      value: Powerup
       objectReference: {fileID: 0}
     - target: {fileID: 4353810885245039105, guid: d8bcc74d9f62c3d47abb469987d62dea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -925,7 +925,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3185988872225001172, guid: d8bcc74d9f62c3d47abb469987d62dea, type: 3}
       propertyPath: m_Name
-      value: LevelPowerup
+      value: Powerup
       objectReference: {fileID: 0}
     - target: {fileID: 4353810885245039105, guid: d8bcc74d9f62c3d47abb469987d62dea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1039,7 +1039,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3185988872225001172, guid: d8bcc74d9f62c3d47abb469987d62dea, type: 3}
       propertyPath: m_Name
-      value: LevelPowerup
+      value: Powerup
       objectReference: {fileID: 0}
     - target: {fileID: 4353810885245039105, guid: d8bcc74d9f62c3d47abb469987d62dea, type: 3}
       propertyPath: m_LocalPosition.x

@@ -13,7 +13,7 @@ public class FollowerAi : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         var target = FindNearestPlayer();
         if (target != null)

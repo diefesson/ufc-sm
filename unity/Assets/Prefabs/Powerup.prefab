@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4353810885245039105}
   - component: {fileID: 6471809730337603177}
   - component: {fileID: 8107873776439998986}
-  - component: {fileID: 2965668538701457993}
+  - component: {fileID: 8457730124469072799}
   m_Layer: 0
-  m_Name: LevelPowerup
+  m_Name: Powerup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,7 +121,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1.0000002, y: 2.0000005}
   m_Direction: 0
---- !u!114 &2965668538701457993
+--- !u!114 &8457730124469072799
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,6 +130,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3185988872225001172}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b4dad39c946fa44486c45b21ab178c6, type: 3}
+  m_Script: {fileID: 11500000, guid: 71e5906f61a06dd4bbddb916dd17e038, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selfDestruction: 1
+  change: 1
+  affectsPlayer: 1
+  affectsEnemy: 0

@@ -13,11 +13,11 @@ public class PlayerShooter : MonoBehaviour
 
     private bool firing;
 
-    private Player player;
+    private HealthProp healthProp;
 
     void Start()
     {
-        player = GetComponent<Player>();
+        healthProp = GetComponent<HealthProp>();
     }
 
     void Update()
@@ -31,9 +31,11 @@ public class PlayerShooter : MonoBehaviour
     private IEnumerator Fire()
     {
         firing = true;
-        var level = player.level;
+        var level = healthProp.Health;
         switch (level)
         {
+            case 0:
+                break;
             case 1:
                 InstantiateBullet(bullet, -0.3f, +0.6f, +0);
                 yield return new WaitForSeconds(0.25f);
