@@ -383,7 +383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pivot: {fileID: 1226247879189314900}
-  bullet: {fileID: 5723796704763754677, guid: 53b40058084c40d4c9c9a7ce45086ee8, type: 3}
+  bullet: {fileID: 7624652847159850286, guid: eb5d5b26f66e351468a726916659dc4b, type: 3}
 --- !u!114 &2707472533465933923
 MonoBehaviour:
   m_ObjectHideFlags: 0
