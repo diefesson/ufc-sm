@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class ShooterRotator : MonoBehaviour
+public class PlayerShooterRotator : MonoBehaviour
 {
     public GameObject gunpoint;
 
