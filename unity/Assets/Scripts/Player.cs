@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -6,7 +7,12 @@ public class Player : MonoBehaviour
 
     public int level = 1;
     public int maxLevel = 4;
-    public float speed;
+
+    public static List<GameObject> Players { get; private set; } = new List<GameObject>();
+
+    void Start() => Players.Add(gameObject);
+
+    void OnDestroy() => Players.Remove(gameObject);
 
     public void LevelUp()
     {

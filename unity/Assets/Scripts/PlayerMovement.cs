@@ -1,14 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
 
+    public float speed = 12;
+
     private Vector2 move;
 
     private Player player;
+
     private Rigidbody2D rb;
 
     void Start()
@@ -19,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = move * player.speed;
+        rb.velocity = move * speed;
     }
 
     public void OnMove(InputValue value)
