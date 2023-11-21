@@ -6,34 +6,36 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
 
-    [Serializable]
-    public struct Entry
-    {
-        public float time;
-        public int quantity;
-        public GameObject gameObject;
-    }
+    public static List<Spawner> globalSpawners { get; private set; } = new List<Spawner>();
 
     public float range = 1f;
-    public List<Entry> entries;
+
+    private bool isGlobalSpawner;
 
     void Start()
     {
-        StartCoroutine(SpawnCoroutine());
-    }
-
-    private IEnumerator SpawnCoroutine()
-    {
-        while (true)
+        isGlobalSpawner = GetComponent<SpawnerManager>() == null;
+        if (isGlobalSpawner)
         {
-            var index = UnityEngine.Random.Range(0, entries.Count);
-            var entry = entries[index];
-            yield return new WaitForSeconds(entry.time);
-            for (int i = 0; i < entry.quantity; i++)
-            {
-                var gameObject = Instantiate(entry.gameObject);
-                gameObject.transform.position = transform.position + (Vector3)(range * UnityEngine.Random.insideUnitCircle);
-            }
+            globalSpawners.Add(this);
         }
     }
+
+    void OnDestroy()
+    {
+        if (isGlobalSpawner)
+        {
+            globalSpawners.Remove(this);
+        }
+    }
+
+    public void Spawn(int quantity, GameObject original)
+    {
+        for (int i = 0; i < quantity; i++)
+        {
+            var gameObject = Instantiate(original);
+            gameObject.transform.position = transform.position + (Vector3)(range * UnityEngine.Random.insideUnitCircle);
+        }
+    }
+
 }
