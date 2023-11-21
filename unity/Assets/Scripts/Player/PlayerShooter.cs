@@ -38,42 +38,42 @@ public class PlayerShooter : MonoBehaviour
                 break;
             case 1:
                 InstantiateBullet(bullet, -0.3f, +0.6f, +0);
-                yield return new WaitForSeconds(0.25f);
+                yield return new WaitForSeconds(0.125f);
                 InstantiateBullet(bullet, +0.3f, +0.6f, +0);
-                yield return new WaitForSeconds(0.25f);
+                yield return new WaitForSeconds(0.125f);
                 break;
             case 2:
                 InstantiateBullet(bullet, -0.2f, +0.6f, +0);
                 InstantiateBullet(bullet, +0.2f, +0.6f, +0);
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.05f);
                 InstantiateBullet(bullet, -0.3f, +0.5f, +5);
                 InstantiateBullet(bullet, +0.3f, +0.5f, -5);
-                yield return new WaitForSeconds(0.4f);
+                yield return new WaitForSeconds(0.2f);
                 break;
             case 3:
                 InstantiateBullet(bullet, -0.2f, +0.6f, +0);
                 InstantiateBullet(bullet, +0.2f, +0.6f, +0);
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.05f);
                 InstantiateBullet(bullet, -0.3f, +0.5f, +5);
                 InstantiateBullet(bullet, +0.3f, +0.5f, -5);
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.05f);
                 InstantiateBullet(bullet, -0.3f, +0.5f, +10);
                 InstantiateBullet(bullet, +0.3f, +0.5f, -10);
-                yield return new WaitForSeconds(0.3f);
+                yield return new WaitForSeconds(0.15f);
                 break;
             case 4:
                 InstantiateBullet(bullet, -0.2f, +0.6f, +0);
                 InstantiateBullet(bullet, +0.2f, +0.6f, +0);
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.05f);
                 InstantiateBullet(bullet, -0.3f, +0.5f, +5);
                 InstantiateBullet(bullet, +0.3f, +0.5f, -5);
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.05f);
                 InstantiateBullet(bullet, -0.3f, +0.5f, +10);
                 InstantiateBullet(bullet, +0.3f, +0.5f, -10);
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.05f);
                 InstantiateBullet(bullet, -0.3f, +0.5f, +15);
                 InstantiateBullet(bullet, +0.3f, +0.5f, -15);
-                yield return new WaitForSeconds(0.2f);
+                yield return new WaitForSeconds(0.1f);
                 break;
             default:
                 print("Invalid level: " + level);
