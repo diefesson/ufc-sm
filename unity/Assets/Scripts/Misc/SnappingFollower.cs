@@ -1,10 +1,9 @@
+using System.Linq;
 using UnityEngine;
 
 [ExecuteAlways]
 public class SnappingFollower : MonoBehaviour
 {
-
-    public GameObject target;
 
     public float xSize = 1;
     public float ySize = 1;
@@ -13,10 +12,11 @@ public class SnappingFollower : MonoBehaviour
 
     void Update()
     {
-        if (target == null)
+        var player = Player.Players.FirstOrDefault();
+        if (player == null)
             return;
-        var x = Snap(target.transform.position.x, xSize, xOffset);
-        var y = Snap(target.transform.position.y, ySize, yOffset);
+        var x = Snap(player.transform.position.x, xSize, xOffset);
+        var y = Snap(player.transform.position.y, ySize, yOffset);
         var z = transform.position.z;
         transform.position = new Vector3(x, y, z);
     }

@@ -5,8 +5,15 @@ public class TransformUp : MonoBehaviour
 
     public float speed;
 
-    void Update()
+    private Rigidbody2D rb;
+
+    void Start()
     {
-        transform.position += transform.up * speed * Time.deltaTime;        
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    void FixedUpdate()
+    {
+        rb.velocity = transform.up * speed;
     }
 }
