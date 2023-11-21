@@ -4,7 +4,8 @@ using UnityEngine;
 public class FollowerAi : MonoBehaviour
 {
 
-    public float speed = 4;
+    public float accel = 1;
+    public float maxSpeed = 4;
 
     private Rigidbody2D rb;
 
@@ -19,7 +20,11 @@ public class FollowerAi : MonoBehaviour
         if (target != null)
         {
             var direction = (target.transform.position - transform.position).normalized;
-            rb.velocity = speed * direction;
+            rb.velocity += (Vector2)direction * accel * Time.deltaTime;
+            if (rb.velocity.magnitude > maxSpeed)
+            {
+                rb.velocity = rb.velocity.normalized * maxSpeed;
+            }
         }
     }
 
