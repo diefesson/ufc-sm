@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 
 public class Util
 {
@@ -8,8 +7,8 @@ public class Util
     {
         var sum = weights.Sum();
         var subsum = 0;
-        var value = Random.Range(0, sum);
-        foreach (var (w, i) in weights.Select((w, i) => (w, i))) 
+        var value = UnityEngine.Random.Range(0, sum);
+        foreach (var (w, i) in weights.Select((w, i) => (w, i)))
         {
             subsum += w;
             if (value < subsum)
@@ -17,6 +16,6 @@ public class Util
                 return i;
             }
         }
-        return -1; // Impossible case
+        return weights.Count() - 1;
     }
 }

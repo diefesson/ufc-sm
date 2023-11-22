@@ -7,6 +7,8 @@ public class ScoreModifier : MonoBehaviour
 
     void OnDestroy()
     {
+        if (!gameObject.scene.isLoaded)
+            return;
         var gameManager = FindObjectOfType<GameManager>();
         gameManager.score += change;
     }

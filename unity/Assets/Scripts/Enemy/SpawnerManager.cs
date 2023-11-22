@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SpawnerManager : MonoBehaviour
@@ -9,6 +10,7 @@ public class SpawnerManager : MonoBehaviour
     public struct Entry
     {
         public float rest;
+        public int weight;
         public int count;
         public GameObject gameObject;
     }
@@ -39,7 +41,8 @@ public class SpawnerManager : MonoBehaviour
 
     private Entry PickEntry()
     {
-        var index = UnityEngine.Random.Range(0, entries.Count);
+
+        var index = Util.WeightedIndex(entries.Select(e => e.weight));
         return entries[index];
     }
 

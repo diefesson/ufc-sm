@@ -25,7 +25,6 @@ public class SpawnOnDestruction : MonoBehaviour
         if (entry.gameObject != null)
         {
             Instantiate(entry.gameObject).transform.position = transform.position;
-
         }
     }
 
