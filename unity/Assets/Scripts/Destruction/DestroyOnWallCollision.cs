@@ -8,7 +8,6 @@ public class DestroyOnWallCollision : MonoBehaviour
 
     private void ProcessCollision(GameObject other, string ty)
     {
-        print(ty + " " + other.name.ToString());
         if (other.GetComponent<Wall>() != null)
             Destroy(gameObject);
     }

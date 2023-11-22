@@ -116,6 +116,7 @@ GameObject:
   - component: {fileID: 4199433265050398468}
   - component: {fileID: 8558831225712166331}
   - component: {fileID: 3804420479295794262}
+  - component: {fileID: 2533264348437076183}
   m_Layer: 0
   m_Name: SpawningPurple
   m_TagString: Untagged
@@ -298,3 +299,18 @@ MonoBehaviour:
   - rest: 5
     count: 1
     gameObject: {fileID: 8751615567848948483, guid: e8b4732b69954634aa7dedfe2e2b103a, type: 3}
+--- !u!114 &2533264348437076183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6603557939440346834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 637f6c7ca6e552d4dafa1eb69ba4e89c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  droptable:
+  - weight: 1
+    gameObject: {fileID: 3185988872225001172, guid: d8bcc74d9f62c3d47abb469987d62dea, type: 3}
