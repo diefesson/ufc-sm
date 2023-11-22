@@ -114,6 +114,7 @@ GameObject:
   - component: {fileID: 7016596260714691151}
   - component: {fileID: 4534719252415247969}
   - component: {fileID: 1479720378182530638}
+  - component: {fileID: 2994431796477982857}
   m_Layer: 0
   m_Name: DullGrey
   m_TagString: Untagged
@@ -267,3 +268,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14db7995e73736c4b8e0fc39481c6c98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2994431796477982857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8021787892878118496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21b151a564980f64ea4a17363e45fbb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  change: 200

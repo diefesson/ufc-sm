@@ -114,6 +114,7 @@ GameObject:
   - component: {fileID: 8094612491451224604}
   - component: {fileID: 4158396437951175759}
   - component: {fileID: 7594759189353258300}
+  - component: {fileID: 1737895620815135823}
   m_Layer: 0
   m_Name: DashingYellow
   m_TagString: Untagged
@@ -267,3 +268,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14db7995e73736c4b8e0fc39481c6c98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1737895620815135823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8751615567848948483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21b151a564980f64ea4a17363e45fbb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  change: 100
