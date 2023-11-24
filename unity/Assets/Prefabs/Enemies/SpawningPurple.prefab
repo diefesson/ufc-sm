@@ -241,9 +241,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf296cec174ba714fa2b6f21c2c91ef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accel: 8
-  maxSpeed: 4
-  minRange: 10
+  accel: 20
+  maxSpeed: 6
+  minRange: 6
   maxRange: Infinity
   minMoveTime: 1
   maxMoveTime: 3
