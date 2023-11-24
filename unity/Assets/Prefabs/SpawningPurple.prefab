@@ -296,9 +296,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f8da92d004c6be4093c2d08adb77eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  limit: 3
   entries:
   - rest: 5
-    weight: 0
+    weight: 1
     count: 1
     gameObject: {fileID: 8751615567848948483, guid: e8b4732b69954634aa7dedfe2e2b103a, type: 3}
 --- !u!114 &2533264348437076183
@@ -316,6 +317,8 @@ MonoBehaviour:
   droptable:
   - weight: 1
     gameObject: {fileID: 3185988872225001172, guid: d8bcc74d9f62c3d47abb469987d62dea, type: 3}
+  - weight: 1
+    gameObject: {fileID: 0}
 --- !u!114 &5701657499569394442
 MonoBehaviour:
   m_ObjectHideFlags: 0

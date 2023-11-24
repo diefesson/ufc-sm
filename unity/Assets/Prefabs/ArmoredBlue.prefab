@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   accel: 8
-  maxSpeed: 3
+  maxSpeed: 4
 --- !u!114 &4359249352342338934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,3 +313,5 @@ MonoBehaviour:
   droptable:
   - weight: 1
     gameObject: {fileID: 3185988872225001172, guid: d8bcc74d9f62c3d47abb469987d62dea, type: 3}
+  - weight: 1
+    gameObject: {fileID: 0}
