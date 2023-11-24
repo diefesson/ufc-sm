@@ -4841,18 +4841,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entries:
-  - rest: 2
+  - rest: 3
     weight: 6
     count: 1
     gameObject: {fileID: 8021787892878118496, guid: 2cb1c82fc99f3db4da2083540a853b67, type: 3}
-  - rest: 2
+  - rest: 3
     weight: 1
     count: 3
     gameObject: {fileID: 8751615567848948483, guid: e8b4732b69954634aa7dedfe2e2b103a, type: 3}
-  - rest: 2
+  - rest: 3
     weight: 1
     count: 1
     gameObject: {fileID: 6603557939440346834, guid: f2269f2adbc8a864489bf15564774865, type: 3}
+  - rest: 3
+    weight: 1
+    count: 1
+    gameObject: {fileID: 9150734796446786089, guid: c4ce273029852f941b0b29665cfe7908, type: 3}
 --- !u!4 &1765456946
 Transform:
   m_ObjectHideFlags: 0
