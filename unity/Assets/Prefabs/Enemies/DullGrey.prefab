@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf296cec174ba714fa2b6f21c2c91ef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accel: 20
+  accel: 8
   maxSpeed: 8
   minRange: 0
   maxRange: Infinity
