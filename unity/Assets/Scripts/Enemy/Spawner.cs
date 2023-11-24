@@ -1,39 +1,20 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
 
-    public static List<Spawner> globalSpawners { get; private set; } = new List<Spawner>();
-
     public float range = 1f;
 
-    private bool isGlobalSpawner;
-
-    void Start()
+    public IEnumerable<GameObject> Spawn(int quantity, GameObject original)
     {
-        isGlobalSpawner = GetComponent<SpawnerManager>() == null;
-        if (isGlobalSpawner)
-        {
-            globalSpawners.Add(this);
-        }
-    }
-
-    void OnDestroy()
-    {
-        if (isGlobalSpawner)
-        {
-            globalSpawners.Remove(this);
-        }
-    }
-
-    public void Spawn(int quantity, GameObject original)
-    {
-        for (int i = 0; i < quantity; i++)
+        return Enumerable.Range(0, quantity).Select(_ =>
         {
             var gameObject = Instantiate(original);
             gameObject.transform.position = transform.position + (Vector3)(range * UnityEngine.Random.insideUnitCircle);
-        }
+            return gameObject;
+        });
     }
 
 }

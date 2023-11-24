@@ -15,27 +15,24 @@ public class SpawnerManager : MonoBehaviour
         public GameObject gameObject;
     }
 
-    public List<Entry> entries;
+    public int limit = 3;
 
-    private List<Spawner> spawners;
+    public Entry[] entries;
+
+    private Spawner[] spawners;
+
+    private List<GameObject> instances;
 
     void Start()
     {
-        var localSpawners = GetComponents<Spawner>();
-        if (localSpawners.Length > 0)
-        {
-            spawners = new List<Spawner>(localSpawners);
-        }
-        else
-        {
-            spawners = Spawner.globalSpawners;
-        }
+        spawners = GetComponentsInChildren<Spawner>();
+        instances = new List<GameObject>();
         StartCoroutine(SpawnCoroutine());
     }
 
     private Spawner PickSpawner()
     {
-        var index = UnityEngine.Random.Range(0, spawners.Count);
+        var index = UnityEngine.Random.Range(0, spawners.Length);
         return spawners[index];
     }
 
@@ -50,10 +47,18 @@ public class SpawnerManager : MonoBehaviour
     {
         while (true)
         {
-            var spawner = PickSpawner();
-            var entry = PickEntry();
-            spawner.Spawn(entry.count, entry.gameObject);
-            yield return new WaitForSeconds(entry.rest);
+            instances.RemoveAll(i => i == null);
+            if (instances.Count < limit)
+            {
+                var spawner = PickSpawner();
+                var entry = PickEntry();
+                instances.AddRange(spawner.Spawn(entry.count, entry.gameObject));
+                yield return new WaitForSeconds(entry.rest);
+            }
+            else
+            {
+                yield return new WaitForEndOfFrame();
+            }
         }
     }
 }
