@@ -7511,9 +7511,13 @@ MonoBehaviour:
   limit: 20
   entries:
   - rest: 2
-    weight: 6
+    weight: 4
     count: 1
     gameObject: {fileID: 8021787892878118496, guid: 2cb1c82fc99f3db4da2083540a853b67, type: 3}
+  - rest: 3
+    weight: 2
+    count: 1
+    gameObject: {fileID: 3438196584198665699, guid: b0a5a2d86158c0c4da54bd9ecaf43fef, type: 3}
   - rest: 2
     weight: 1
     count: 3
@@ -7523,7 +7527,7 @@ MonoBehaviour:
     count: 1
     gameObject: {fileID: 6603557939440346834, guid: f2269f2adbc8a864489bf15564774865, type: 3}
   - rest: 2
-    weight: 2
+    weight: 1
     count: 1
     gameObject: {fileID: 9150734796446786089, guid: c4ce273029852f941b0b29665cfe7908, type: 3}
 --- !u!1 &2112172934
