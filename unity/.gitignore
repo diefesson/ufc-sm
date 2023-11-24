@@ -75,5 +75,11 @@ crashlytics-build.properties
 /.vsconfig
 
 # TextMesh Pro
-/[Aa]ssets/TextMesh Pro
-/[Aa]ssets/TextMesh Pro.meta
+/[Aa]ssets/[Tt]ext[Mm]esh [Pp]ro
+/[Aa]ssets/[Tt]ext[Mm]esh [Pp]ro.meta
+
+# Input Actions
+/[Aa]ssets/[Ii]nput[Aa]ctions/*.cs
+/[Aa]ssets/[Ii]nput[Aa]ctions/*.cs.meta
+
+45d118e58b64145c4be5c724a5a5d3943f680e51

@@ -5,11 +5,23 @@ public class PlayerShooterRotator : MonoBehaviour
 {
     public GameObject gunpoint;
 
-    private Vector2 move;
-
-    private Vector2 aim;
-
+    private PlayerInputActions inputActions;
     private Vector2 direction;
+
+    private void Awake()
+    {
+        inputActions = new PlayerInputActions();
+    }
+
+    private void OnEnable()
+    {
+        inputActions.Gameplay.Enable();
+    }
+
+    private void OnDisable()
+    {
+        inputActions.Gameplay.Disable();
+    }
 
     void Start()
     {
@@ -18,6 +30,8 @@ public class PlayerShooterRotator : MonoBehaviour
 
     void Update()
     {
+        var move = inputActions.Gameplay.Move.ReadValue<Vector2>();
+        var aim = inputActions.Gameplay.Aim.ReadValue<Vector2>();
         if (aim != Vector2.zero)
         {
             direction = aim;
@@ -28,8 +42,4 @@ public class PlayerShooterRotator : MonoBehaviour
         }
         gunpoint.transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
     }
-
-    public void OnMove(InputValue value) => move = value.Get<Vector2>();
-
-    public void OnAim(InputValue value) => aim = value.Get<Vector2>();
 }

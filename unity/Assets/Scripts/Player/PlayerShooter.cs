@@ -9,19 +9,34 @@ public class PlayerShooter : MonoBehaviour
 
     public GameObject bullet;
 
-    private bool fire;
-
     private bool firing;
 
+    private PlayerInputActions inputActions;
     private HealthProp healthProp;
 
-    void Start()
+    private void Awake()
+    {
+        inputActions = new PlayerInputActions();
+    }
+
+    private void OnEnable()
+    {
+        inputActions.Gameplay.Enable();
+    }
+
+    private void OnDisable()
+    {
+        inputActions.Gameplay.Disable();
+    }
+
+    private void Start()
     {
         healthProp = GetComponent<HealthProp>();
     }
 
-    void Update()
+    private void Update()
     {
+        var fire = inputActions.Gameplay.Fire.IsPressed();
         if (fire && !firing)
         {
             StartCoroutine(Fire());
@@ -89,6 +104,4 @@ public class PlayerShooter : MonoBehaviour
         var rotation = pivot.transform.rotation * Quaternion.Euler(0, 0, angle);
         return Instantiate(bullet, position, rotation);
     }
-
-    public void OnFire(InputValue inputValue) => fire = inputValue.isPressed;
 }
