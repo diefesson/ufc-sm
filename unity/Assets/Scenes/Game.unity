@@ -7508,7 +7508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f8da92d004c6be4093c2d08adb77eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  limit: 10
+  limit: 20
   entries:
   - rest: 2
     weight: 6
