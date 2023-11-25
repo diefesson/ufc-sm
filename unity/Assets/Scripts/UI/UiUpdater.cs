@@ -3,13 +3,19 @@ using UnityEngine;
 
 public class UiUpdater : MonoBehaviour
 {
-    private GameManager gameManager;
-    private TextMeshProUGUI scoreMesh;
+    public GameObject gameOverObject;
+    public TextMeshProUGUI scoreMesh;
 
-    void Start()
+    private GameManager gameManager;
+
+    private void Start()
     {
         gameManager = FindAnyObjectByType<GameManager>();
-        scoreMesh = transform.Find("Score").GetComponent<TextMeshProUGUI>();
         gameManager.scoreChange += (score) => scoreMesh.text = score.ToString();
+    }
+
+    private void Update()
+    {
+        gameOverObject.SetActive(Player.Players.Count == 0);
     }
 }
