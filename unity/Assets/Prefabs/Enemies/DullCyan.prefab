@@ -115,6 +115,7 @@ GameObject:
   - component: {fileID: 4534719252415247969}
   - component: {fileID: 1479720378182530638}
   - component: {fileID: 2994431796477982857}
+  - component: {fileID: 6792769917944676878}
   m_Layer: 0
   m_Name: DullCyan
   m_TagString: Untagged
@@ -262,6 +263,8 @@ MonoBehaviour:
   change: -1
   affectsPlayer: 1
   affectsEnemy: 0
+  audioClip: {fileID: 0}
+  volume: 1
 --- !u!114 &1479720378182530638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,3 +290,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   change: 200
+--- !u!114 &6792769917944676878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8021787892878118496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfdfaaaba9f39974f87b2c476dec7e5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 4c81032199cd3c4408d34e8d0febb9ed, type: 3}
+  volume: 0.4

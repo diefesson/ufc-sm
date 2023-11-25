@@ -7,6 +7,9 @@ public class HealthModifier : MonoBehaviour
     public int change = -1;
     public bool affectsPlayer = true;
     public bool affectsEnemy = false;
+    [SerializeField]
+    public AudioClip audioClip;
+    public float volume = 1;
 
     void OnTriggerEnter2D(Collider2D collision) => ProcessCollision(collision.gameObject);
 
@@ -20,10 +23,11 @@ public class HealthModifier : MonoBehaviour
         if (healthProp != null && (affectsPlayer && isPlayer || affectsEnemy && isEnemy))
         {
             healthProp.Health += change;
+            if (audioClip != null)
+                AudioSource.PlayClipAtPoint(audioClip, transform.position, volume);
             if (selfDestruction)
-            {
                 Destroy(gameObject);
-            }
+
         }
     }
 }

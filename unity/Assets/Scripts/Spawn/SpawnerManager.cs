@@ -58,7 +58,7 @@ public class SpawnerManager : MonoBehaviour
         while (true)
         {
             instances.RemoveAll(i => i == null);
-            if (instances.Count < limit)
+            if (instances.Count < limit && Player.Players.Count > 0)
             {
                 var spawner = PickSpawner();
                 var entry = PickEntry();

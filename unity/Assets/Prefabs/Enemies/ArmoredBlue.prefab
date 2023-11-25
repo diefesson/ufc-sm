@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 7552160544039048082}
   - component: {fileID: 3981350626606583326}
   - component: {fileID: 8456032909901616435}
+  - component: {fileID: 1255976932660377256}
   m_Layer: 0
   m_Name: ArmoredBlue
   m_TagString: Untagged
@@ -279,6 +280,8 @@ MonoBehaviour:
   change: -1
   affectsPlayer: 1
   affectsEnemy: 0
+  audioClip: {fileID: 0}
+  volume: 1
 --- !u!114 &7552160544039048082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,3 +324,17 @@ MonoBehaviour:
     gameObject: {fileID: 3185988872225001172, guid: d8bcc74d9f62c3d47abb469987d62dea, type: 3}
   - weight: 1
     gameObject: {fileID: 0}
+--- !u!114 &1255976932660377256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9150734796446786089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfdfaaaba9f39974f87b2c476dec7e5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 4c81032199cd3c4408d34e8d0febb9ed, type: 3}
+  volume: 0.4

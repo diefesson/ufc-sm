@@ -115,6 +115,7 @@ GameObject:
   - component: {fileID: 4158396437951175759}
   - component: {fileID: 7594759189353258300}
   - component: {fileID: 1737895620815135823}
+  - component: {fileID: 4272131489234482617}
   m_Layer: 0
   m_Name: DashingYellow
   m_TagString: Untagged
@@ -262,6 +263,8 @@ MonoBehaviour:
   change: -1
   affectsPlayer: 1
   affectsEnemy: 0
+  audioClip: {fileID: 0}
+  volume: 1
 --- !u!114 &7594759189353258300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,3 +290,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   change: 100
+--- !u!114 &4272131489234482617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8751615567848948483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfdfaaaba9f39974f87b2c476dec7e5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 4c81032199cd3c4408d34e8d0febb9ed, type: 3}
+  volume: 0.4

@@ -6,12 +6,14 @@ public class PlayerShooter : MonoBehaviour
 {
 
     public GameObject pivot;
-
     public GameObject bullet;
+    [SerializeField]
+    public AudioClip shootClip;
 
     private bool firing;
 
     private PlayerInputActions inputActions;
+    private AudioSource audioSource;
     private HealthProp healthProp;
 
     private void Awake()
@@ -31,6 +33,7 @@ public class PlayerShooter : MonoBehaviour
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         healthProp = GetComponent<HealthProp>();
     }
 
@@ -53,41 +56,52 @@ public class PlayerShooter : MonoBehaviour
                 break;
             case 1:
                 InstantiateBullet(bullet, -0.3f, +0.6f, +0);
+                audioSource.PlayOneShot(shootClip);
                 yield return new WaitForSeconds(0.125f);
                 InstantiateBullet(bullet, +0.3f, +0.6f, +0);
+                audioSource.PlayOneShot(shootClip);
                 yield return new WaitForSeconds(0.125f);
                 break;
             case 2:
                 InstantiateBullet(bullet, -0.2f, +0.6f, +0);
                 InstantiateBullet(bullet, +0.2f, +0.6f, +0);
+                audioSource.PlayOneShot(shootClip);
                 yield return new WaitForSeconds(0.05f);
                 InstantiateBullet(bullet, -0.3f, +0.5f, +5);
                 InstantiateBullet(bullet, +0.3f, +0.5f, -5);
+                audioSource.PlayOneShot(shootClip);
                 yield return new WaitForSeconds(0.2f);
                 break;
             case 3:
                 InstantiateBullet(bullet, -0.2f, +0.6f, +0);
                 InstantiateBullet(bullet, +0.2f, +0.6f, +0);
+                audioSource.PlayOneShot(shootClip);
                 yield return new WaitForSeconds(0.05f);
                 InstantiateBullet(bullet, -0.3f, +0.5f, +5);
                 InstantiateBullet(bullet, +0.3f, +0.5f, -5);
+                audioSource.PlayOneShot(shootClip);
                 yield return new WaitForSeconds(0.05f);
                 InstantiateBullet(bullet, -0.3f, +0.5f, +10);
                 InstantiateBullet(bullet, +0.3f, +0.5f, -10);
+                audioSource.PlayOneShot(shootClip);
                 yield return new WaitForSeconds(0.15f);
                 break;
             case 4:
                 InstantiateBullet(bullet, -0.2f, +0.6f, +0);
                 InstantiateBullet(bullet, +0.2f, +0.6f, +0);
+                audioSource.PlayOneShot(shootClip);
                 yield return new WaitForSeconds(0.05f);
                 InstantiateBullet(bullet, -0.3f, +0.5f, +5);
                 InstantiateBullet(bullet, +0.3f, +0.5f, -5);
+                audioSource.PlayOneShot(shootClip);
                 yield return new WaitForSeconds(0.05f);
                 InstantiateBullet(bullet, -0.3f, +0.5f, +10);
                 InstantiateBullet(bullet, +0.3f, +0.5f, -10);
+                audioSource.PlayOneShot(shootClip);
                 yield return new WaitForSeconds(0.05f);
                 InstantiateBullet(bullet, -0.3f, +0.5f, +15);
                 InstantiateBullet(bullet, +0.3f, +0.5f, -15);
+                audioSource.PlayOneShot(shootClip);
                 yield return new WaitForSeconds(0.1f);
                 break;
             default:
