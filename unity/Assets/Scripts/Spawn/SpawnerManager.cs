@@ -15,6 +15,8 @@ public class SpawnerManager : MonoBehaviour
         public GameObject gameObject;
     }
 
+    public int playerMinRange = 0;
+
     public int limit = 3;
 
     public Entry[] entries;
@@ -32,8 +34,16 @@ public class SpawnerManager : MonoBehaviour
 
     private Spawner PickSpawner()
     {
-        var index = UnityEngine.Random.Range(0, spawners.Length);
-        return spawners[index];
+        double PlayerDistance(Spawner s) => Player.Players.Select(p => (p.transform.position - s.transform.position).magnitude).Min();
+        var validSpawners = (
+                from spawner in spawners
+                where playerMinRange <= PlayerDistance(spawner)
+                orderby PlayerDistance(spawner)
+                select spawner
+            ).ToArray();
+        var weights = Enumerable.Range(1, validSpawners.Count()).Reverse();
+        var index = Util.WeightedIndex(weights);
+        return validSpawners[index];
     }
 
     private Entry PickEntry()
