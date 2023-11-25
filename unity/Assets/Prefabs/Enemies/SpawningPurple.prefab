@@ -118,6 +118,7 @@ GameObject:
   - component: {fileID: 3804420479295794262}
   - component: {fileID: 2533264348437076183}
   - component: {fileID: 5701657499569394442}
+  - component: {fileID: 6052577246139635774}
   m_Layer: 0
   m_Name: SpawningPurple
   m_TagString: Untagged
@@ -265,6 +266,8 @@ MonoBehaviour:
   change: -1
   affectsPlayer: 1
   affectsEnemy: 0
+  audioClip: {fileID: 0}
+  volume: 1
 --- !u!114 &4199433265050398468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,6 +305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f8da92d004c6be4093c2d08adb77eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerMinRange: 0
   limit: 1
   entries:
   - rest: 3
@@ -338,3 +342,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   change: 500
+--- !u!114 &6052577246139635774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6603557939440346834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfdfaaaba9f39974f87b2c476dec7e5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 4c81032199cd3c4408d34e8d0febb9ed, type: 3}
+  volume: 0.4

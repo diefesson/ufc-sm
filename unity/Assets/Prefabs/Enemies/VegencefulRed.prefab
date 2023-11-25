@@ -116,6 +116,7 @@ GameObject:
   - component: {fileID: 4352425056895235747}
   - component: {fileID: 5565079096651624158}
   - component: {fileID: 427497068146729633}
+  - component: {fileID: 2154063235463862201}
   m_Layer: 0
   m_Name: VegencefulRed
   m_TagString: Untagged
@@ -263,6 +264,8 @@ MonoBehaviour:
   change: -1
   affectsPlayer: 1
   affectsEnemy: 0
+  audioClip: {fileID: 0}
+  volume: 1
 --- !u!114 &4352425056895235747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,3 +306,17 @@ MonoBehaviour:
   droptable:
   - weight: 1
     gameObject: {fileID: 1983754648131510555, guid: 58a9fb2d9edfa9f47840eb92cf1dfd01, type: 3}
+--- !u!114 &2154063235463862201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3438196584198665699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfdfaaaba9f39974f87b2c476dec7e5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 4c81032199cd3c4408d34e8d0febb9ed, type: 3}
+  volume: 0.4

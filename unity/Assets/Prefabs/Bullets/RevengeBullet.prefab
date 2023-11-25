@@ -282,6 +282,7 @@ MonoBehaviour:
   change: -1
   affectsPlayer: 1
   affectsEnemy: 0
+  audioClip: {fileID: 8300000, guid: 7db16efb35ef7dd43a24ce40a5f3dd3e, type: 3}
 --- !u!114 &1795722441210035109
 MonoBehaviour:
   m_ObjectHideFlags: 0
