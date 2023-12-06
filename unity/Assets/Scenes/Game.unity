@@ -3480,9 +3480,13 @@ MonoBehaviour:
   limit: 6
   entries:
   - rest: 1
-    weight: 2
+    weight: 1
     count: 1
     gameObject: {fileID: 8021787892878118496, guid: 2cb1c82fc99f3db4da2083540a853b67, type: 3}
+  - rest: 1
+    weight: 1
+    count: 1
+    gameObject: {fileID: 2063232091281431977, guid: 0d23c4e5d92c6104a87279a164da5f1e, type: 3}
   - rest: 1
     weight: 2
     count: 1
