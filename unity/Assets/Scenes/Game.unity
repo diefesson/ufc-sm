@@ -3486,6 +3486,10 @@ MonoBehaviour:
   - rest: 1
     weight: 2
     count: 1
+    gameObject: {fileID: 2063232091281431977, guid: 0d23c4e5d92c6104a87279a164da5f1e, type: 3}
+  - rest: 1
+    weight: 2
+    count: 1
     gameObject: {fileID: 3438196584198665699, guid: b0a5a2d86158c0c4da54bd9ecaf43fef, type: 3}
   - rest: 1
     weight: 1
